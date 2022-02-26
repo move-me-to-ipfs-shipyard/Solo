@@ -1,0 +1,5 @@
+[user]
+  name = Solo
+  email = Solo@galaxy-swindler
+
+# git config --local include.path ../.gitconfig
