@@ -1,4 +1,4 @@
-(ns Solo.salt
+(ns Solo.B12
   (:require
    [clojure.core.async
     :refer [chan put! take! close! offer! to-chan! timeout thread
