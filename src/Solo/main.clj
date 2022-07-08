@@ -122,9 +122,7 @@
     (doto jpanel-tab
       (.setLayout (MigLayout. "insets 10"))
       (.add (JLabel. ":apricotseed?") "cell 0 0")
-      (.add jcheckbox-apricotseed "cell 0 0")
-      (.add (JLabel. ":ipfs-http-api") "cell 0 1")
-      (.add (JTextField. "http://127.0.0.1:5001") "cell 1 1"))
+      (.add jcheckbox-apricotseed "cell 0 0"))
 
     (.addActionListener jcheckbox-apricotseed
                         (reify ActionListener
@@ -133,7 +131,7 @@
                              (reify Runnable
                                (run [_]
                                  #_(put! ops| {:op :settings-value
-                                               :_ (.isSelected jcheckbox-apricotseed)})))))))
+                                               :apricotseed? (.isSelected jcheckbox-apricotseed)})))))))
 
     (remove-watch settingsA :settings-process)
     (add-watch settingsA :settings-process
@@ -141,7 +139,7 @@
                  (SwingUtilities/invokeLater
                   (reify Runnable
                     (run [_]
-                      (.setSelected jcheckbox-apricotseed (:apricotseed? new-state))))))))
+                      #_(.setSelected jcheckbox-apricotseed (:apricotseed? new-state))))))))
   nil)
 
 (defn -main
@@ -186,7 +184,7 @@
     (let []
       (clojure.java.io/make-parents program-data-dirpath)
       (reset! stateA {})
-      (reset! settingsA {:editor? true})
+      (reset! settingsA {:apricotseed? true})
 
 
 
