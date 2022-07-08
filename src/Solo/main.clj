@@ -18,7 +18,7 @@
    [Solo.red-grapes]
    [Solo.B12]
    [Solo.salt]
-   [Solo.oats]
+   [Solo.bread]
    [Solo.dates])
   (:import
    (javax.swing JFrame WindowConstants JPanel JScrollPane JTextArea BoxLayout JEditorPane ScrollPaneConstants SwingUtilities JDialog)
@@ -68,7 +68,7 @@
    '[Solo.red-grapes]
    '[Solo.B12]
    '[Solo.salt]
-   '[Solo.oats]
+   '[Solo.bread]
    '[Solo.dates]
    '[Solo.main]
    :reload))
@@ -194,7 +194,7 @@
             jpanel-red-grapes (JPanel.)
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
-            jpanel-oats (JPanel.)
+            jpanel-bread (JPanel.)
             jpanel-dates (JPanel.)]
 
         (doto jtabbed-pane
@@ -202,11 +202,11 @@
           (.addTab "red-grapes" jpanel-red-grapes)
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
-          (.addTab "oats" jpanel-oats)
+          (.addTab "bread" jpanel-bread)
           (.addTab "dates" jpanel-dates)
-          (.setSelectedComponent jpanel-oats))
+          (.setSelectedComponent jpanel-bread))
 
-        (Solo.oats/process {:jpanel-tab jpanel-oats
+        (Solo.bread/process {:jpanel-tab jpanel-bread
                                :db-data-dirpath db-data-dirpath})
 
         (settings-process {:jpanel-tab jpanel-B12
