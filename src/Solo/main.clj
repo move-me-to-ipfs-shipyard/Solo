@@ -16,6 +16,7 @@
    [taoensso.timbre]
 
    [Solo.red-grapes]
+   [Solo.grapefruit]
    [Solo.B12]
    [Solo.salt]
    [Solo.bread]
@@ -66,6 +67,7 @@
   []
   (require
    '[Solo.red-grapes]
+   '[Solo.grapefruit]
    '[Solo.B12]
    '[Solo.salt]
    '[Solo.bread]
@@ -190,6 +192,7 @@
 
       (let [jtabbed-pane (JTabbedPane.)
             jpanel-red-grapes (JPanel.)
+            jpanel-grapefruit (JPanel.)
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
             jpanel-bread (JPanel.)
@@ -198,6 +201,7 @@
         (doto jtabbed-pane
           (.setTabLayoutPolicy JTabbedPane/SCROLL_TAB_LAYOUT)
           (.addTab "red-grapes" jpanel-red-grapes)
+          (.addTab "grapefruit" jpanel-grapefruit)
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
           (.addTab "bread" jpanel-bread)
