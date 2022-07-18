@@ -20,7 +20,6 @@
    [Solo.B12]
    [Solo.salt]
    [Solo.bread]
-   [Solo.water]
    [Solo.raisins])
   (:import
    (javax.swing JFrame WindowConstants JPanel JScrollPane JTextArea BoxLayout JEditorPane ScrollPaneConstants SwingUtilities JDialog)
@@ -72,7 +71,6 @@
    '[Solo.B12]
    '[Solo.salt]
    '[Solo.bread]
-   '[Solo.water]
    '[Solo.raisins]
    '[Solo.main]
    :reload))
@@ -198,7 +196,6 @@
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
             jpanel-bread (JPanel.)
-            jpanel-water (JPanel.)
             jpanel-raisins (JPanel.)]
 
         (doto jtabbed-pane
@@ -208,7 +205,6 @@
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
           (.addTab "bread" jpanel-bread)
-          (.addTab "water" jpanel-water)
           (.addTab "raisins" jpanel-raisins)
           (.setSelectedComponent jpanel-bread))
 
