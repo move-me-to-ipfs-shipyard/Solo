@@ -15,6 +15,7 @@
    [datahike.api]
    [taoensso.timbre]
 
+   [Solo.water]
    [Solo.red-grapes]
    [Solo.B12]
    [Solo.salt]
@@ -65,6 +66,7 @@
 (defn reload
   []
   (require
+   '[Solo.water]
    '[Solo.red-grapes]
    '[Solo.B12]
    '[Solo.salt]
